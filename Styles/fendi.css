@@ -5,3 +5,135 @@
     box-sizing: border-box;
     letter-spacing: 2px;
 }
+body{
+    background-color: white;
+}
+#content{
+    width: 80%;
+    margin: auto;
+    margin-top: 5%;
+    margin-bottom: 10%;
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+}
+#content>div:nth-child(1){
+    grid-area: 1/1/1/1;
+}
+#content>div:nth-child(2){
+    grid-area: 1/2/1/4;
+}
+#content>div>select{
+    padding: 4%;
+    font-size: medium;
+    margin-top: 10%;
+    cursor: pointer;
+}
+#content>div>img{
+    width: 100%;
+}
+#fendiwall{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 20px 15px;
+}
+#fendiwall>div{
+    border: 1px solid rgba(207, 207, 207, 0.744);
+    padding: 8% 6%;
+    position: relative;
+    animation: opac 1s ease;
+}
+#fendiwall>div>img{
+    width: 100%;
+}
+#fendiwall>div>h1{
+    margin-top: 2%;
+}
+#fendiwall>div>p{
+    margin-top: 3%;
+    font-size: 17px;
+}
+#fendiwall>div>#price{
+    margin-top: 10%;
+    font-weight: bold;
+}
+#fendiwall>div>button{
+    margin-top: 6%;
+    padding: 5%;
+    font-size: medium;
+    cursor: pointer;
+    background-color: rgb(239, 239, 239);
+    border-radius: 6px;
+    border: none;
+}
+#fendiwall>div>#heart{
+    background: transparent;
+    font-size: 18px;
+    border: none;
+    position: absolute;
+    top: -1.5%;
+    left: 80%;
+}
+#text{
+    position: absolute;
+    left: 76%;
+    top: 1%;
+    color: red;
+    font-weight: bold;
+    animation: opac 1s ease;
+}
+
+@keyframes opac{
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+}
+@media all and (max-width: 600px){
+    #content{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+    #fendiwall{
+        display: grid;
+        grid-template-columns: 1fr;
+        margin-top: 10%;
+    }
+    #content>div>select{
+        margin-top: 5%;
+    }
+}
+@media all and (min-width: 601px) and (max-width: 949px){
+    #content{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+    #fendiwall{
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+        margin-top: 10%;
+    }
+    #content>div>select{
+        padding: 3%;
+        margin-top: 5%;
+    }
+}
+@media all and (min-width: 950px) and (max-width: 1400px){
+    #content{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+    #fendiwall{
+        display: grid;
+        grid-template-columns: repeat(3,1fr);
+        margin-top: 10%;
+    }
+    #content>div>select{
+        padding: 2%;
+        margin-top: 5%;
+    }
+}

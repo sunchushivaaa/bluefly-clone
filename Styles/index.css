@@ -5,3 +5,175 @@
     box-sizing: border-box;
     letter-spacing: 2px;
 }
+body{
+    background-color: black;
+}
+#library{
+    margin: auto;
+    background-color: black;
+}
+#library>div{
+    width: 90%;
+    margin: auto;
+}
+#library>div>div{
+    position: relative;
+}
+.items , .hidden{
+    display: none;
+}
+.visible{
+    display: block;
+    animation: fade 0.4s ease-in;
+}
+.actions{
+    width: 100%;
+    position: absolute;
+    top: 80%;
+    left: 5%;
+    display: flex;
+    justify-content: space-between;
+}
+.actions>button{
+    cursor: pointer;
+    padding: 1%;
+    font-size: 25px;
+    color: white;
+    background: transparent;
+    border: none;
+}
+#library>div>div>img{
+    width: 100%; 
+    opacity: 90%;
+}
+#library>div>div>div{
+    position: absolute;
+    z-index: 100;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 23%;
+    transform: translateZ(-50%);
+}
+#library>div>div>div>h1{
+    font-size: 70px;
+    text-align: center;
+    margin-bottom: 2%;
+    color: white;
+    animation: opac 1s;
+}
+#library>div>div>div>p{
+    font-size: larger;
+    text-align: center;
+    margin-bottom: 2%;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    color: white;
+    animation: opac2 2s;
+}
+#library>div>div>div>button{
+    padding: 2% 2%;
+    font-size: medium;
+    margin-left: 42%;
+    background-color: white;
+    border: none;
+    cursor: pointer;
+    animation: opac3 2.5s;
+}
+@keyframes opac{
+
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity : 100;
+    }
+}
+@keyframes opac2{
+
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity : 1;
+    }
+}
+@keyframes opac3{
+
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity : 1;
+    }
+}
+@keyframes fade {
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+}
+
+
+@media all and (max-width: 600px){
+    .actions{
+        width: 100%;
+        position: relative;
+        left: 0;
+        display: flex;
+        justify-content: space-between;
+    }
+    #library>div>div>div{
+        left: 0%;
+    }
+    #library>div>div>#sun{
+        left: 5%;
+    }
+    #library>div>div>div>h1{
+        font-size: 40px;
+    }
+    #library>div>div>div>p{
+        font-size: small;
+        margin-bottom: 4%;
+    }
+    #library>div>div>div>button{
+        font-size: small;
+        margin-left: 38%;
+    }
+    #library>div>div>img{
+        width: 100%; 
+        opacity: 90%;
+    }
+}
+
+@media all and (min-width: 601px) and (max-width: 720px){
+    .actions{
+        width: 100%;
+        position: absolute;
+        left: 5%;
+        top: 50%;
+        display: flex;
+        justify-content: space-between;
+    }
+    #library>div>div>div{
+        left:6%;
+    }
+    #library>div>div>#sun{
+        left: 13%;
+    }
+    #library>div>div>div>h1{
+        font-size: 42px;
+    }
+    #library>div>div>div>p{
+        font-size: smaller;
+        margin-bottom: 2%;
+    }
+    #library>div>div>div>button{
+        font-size: smaller;
+        margin-left: 38%;
+    }
+    #library>div>div>img{
+        width: 100%; 
+        opacity: 90%;
+    }
+}

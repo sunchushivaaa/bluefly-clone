@@ -1,0 +1,13 @@
+body{
+    opacity: 1;
+    animation: opac 1s ease;
+}
+
+@keyframes opac {
+    0%{
+        opacity: 0.1;
+    }
+    100%{
+        opacity: 1;
+    }
+}
