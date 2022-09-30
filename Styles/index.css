@@ -1,16 +1,15 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Quicksand&display=swap');
 *{
     padding: 0;
     margin: 0;
     box-sizing: border-box;
     letter-spacing: 2px;
 }
-body{
-    background-color: black;
-}
 #library{
     margin: auto;
     background-color: black;
+    margin-bottom: 6%;
 }
 #library>div{
     width: 90%;
@@ -78,6 +77,82 @@ body{
     cursor: pointer;
     animation: opac3 2.5s;
 }
+#shopcategory{
+    width: 80%;
+    margin: auto;
+    text-align: center;
+    margin-bottom: 5%;
+}
+#shopcategory>h1{
+    font-size: 35px;
+    margin-bottom: 5%;
+}
+#shopcategory>#categories{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 15px;
+    margin-top: 3%;
+}
+#shopcategory>#categories>div{
+    border: 1px solid rgba(206, 206, 206, 0.744);
+    padding: 5% 8%;
+    cursor: pointer;
+    animation: opac 1s;
+}
+#shopcategory>#categories>div:hover{
+    border: 1px solid rgba(128, 128, 128, 0.744);
+}
+#shopcategory>#categories>div>img{
+    width: 100%;
+}
+#shopcategory>#categories>div>p{
+    font-family: 'Quicksand', sans-serif;
+    font-weight: bold;
+    font-size: large;
+    margin-top: 5%;
+}
+#dis{
+    margin-bottom: 10%;
+}
+#dis>h1{
+    text-align: center;
+    margin-top: 8%;
+    margin-bottom: 3%;
+    font-size: 35px;
+}
+#discount{
+    width: 90%;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 15px;
+}
+#discount>div{
+    padding: 4%;
+}
+#discount>div>img{
+    width: 100%;
+}
+#discount>div>h2{
+    margin-top: 3%;
+}
+#discount>div>p{
+    margin-top: 3%;
+    font-family: 'Quicksand', sans-serif;
+}
+#discount>div>button{
+    margin-top: 4%;
+    background-color: rgb(237, 237, 237);
+    border: none;
+    border-radius: 5px;
+    padding: 4%;
+    cursor: pointer;
+    font-family: 'Quicksand', sans-serif;
+    font-weight: bold;
+}
+#discount>div>button:hover{
+    background-color: rgb(231, 231, 231);
+}
 @keyframes opac{
 
     0%{
@@ -123,6 +198,9 @@ body{
         display: flex;
         justify-content: space-between;
     }
+    #library{
+        margin-bottom: 15%;
+    }
     #library>div>div>div{
         left: 0%;
     }
@@ -143,6 +221,26 @@ body{
     #library>div>div>img{
         width: 100%; 
         opacity: 90%;
+    }
+    #shopcategory{
+        margin-bottom: 20%;
+    }
+    #shopcategory>h1{
+        font-size: 30px;
+        margin-bottom: 8%;
+    }
+    #shopcategory>#categories{
+        grid-template-columns: 1fr;
+    }
+    #dis{
+        margin-bottom: 10%;
+    }
+    #dis>h1{
+        font-size: 30px;
+        margin-bottom: 3%;
+    }
+    #discount{
+        grid-template-columns: 1fr;
     }
 }
 
@@ -175,5 +273,47 @@ body{
     #library>div>div>img{
         width: 100%; 
         opacity: 90%;
+    }
+    #shopcategory{
+        margin-bottom: 20%;
+    }
+    #shopcategory>h1{
+        font-size: 30px;
+        margin-bottom: 8%;
+    }
+    #shopcategory>#categories{
+        grid-template-columns: 1fr;
+    }
+    #dis{
+        margin-bottom: 10%;
+    }
+    #dis>h1{
+        font-size: 30px;
+        margin-bottom: 3%;
+    }
+    #discount{
+        grid-template-columns: 1fr;
+    }
+}
+@media all and (min-width: 721px) and (max-width: 1440px){
+    #shopcategory{
+        margin-bottom: 20%;
+    }
+    #shopcategory>h1{
+        font-size: 30px;
+        margin-bottom: 8%;
+    }
+    #shopcategory>#categories{
+        grid-template-columns: repeat(2,1fr);
+    }
+    #dis{
+        margin-bottom: 10%;
+    }
+    #dis>h1{
+        font-size: 30px;
+        margin-bottom: 3%;
+    }
+    #discount{
+        grid-template-columns: repeat(2,1fr);
     }
 }

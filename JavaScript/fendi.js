@@ -482,6 +482,19 @@ function displayFun(read){
         cartData.push(elem);
         localStorage.setItem("cart-items", JSON.stringify(cartData));
         })
+
+        image.addEventListener("click", function(){
+
+          let prod = [elem];
+          let descrpt = read.filter(function(el){
+            return elem.brand == el.brand && elem.category == el.category;
+          });
+      
+          localStorage.setItem("descrpt" , JSON.stringify(descrpt));
+          localStorage.setItem("prod", JSON.stringify(prod));
+          localStorage.setItem("dataArr" , JSON.stringify(descrpt));
+          window.location.href = "/HTML/description.html";
+        });
         
         div.append(text,image,brand,desc,price, likebtn, cartbtn);
         wall.append(div);
