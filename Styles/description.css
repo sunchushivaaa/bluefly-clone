@@ -1,0 +1,160 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200&display=swap');
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    letter-spacing: 2px;
+}
+#prodwall{
+    width: 80%;
+    margin: auto;
+    margin-top: 5%;
+    margin-bottom: 5%;
+    padding: 2%;
+    display: flex;
+    justify-content: space-between;
+    border: 1px solid rgba(138, 138, 138, 0.744);
+}
+#prodwall>div{
+    width: 35%;
+    margin: auto;
+    padding: 6% 3%;
+    position: relative;
+    animation: opac 1s ease;
+    border: 1px solid bla;
+}
+#prodwall>div>img{
+    width: 100%;
+}
+#prodwall>div>h1{
+    margin-top: 1%;
+    text-align: center;
+}
+#prodwall>div>p{
+    margin-top: 10%;
+    font-size: 17px;
+    text-align: justify;
+}
+#prodwall>div>#price1{
+    margin-top: 10%;
+    font-weight: bold;
+}
+#prodwall>div>button{
+    margin-top: 6%;
+    padding: 5%;
+    font-size: medium;
+    cursor: pointer;
+    background-color: rgb(239, 239, 239);
+    border-radius: 6px;
+    border: none;
+}
+#prodwall>div>#heart1{
+    background: transparent;
+    font-size: 18px;
+    border: none;
+    position: absolute;
+    top: 5%;
+    left: 80%;
+}
+#text1{
+    position: absolute;
+    left: 80%;
+    top: 5%;
+    color: red;
+    font-weight: bold;
+    animation: opac 1s ease;
+}
+#prodwall>div:nth-child(1)>p{
+    margin-top: 10%;
+    text-align: center;
+}
+#prodwall>div:nth-child(2){
+    padding: 0%;
+}
+#descriptionwall{
+    width: 80%;
+    margin: auto;
+    margin-bottom: 5%;
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    gap: 15px
+}
+@keyframes opac{
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+}
+#descriptionwall>div{
+    border: 1px solid rgba(207, 207, 207, 0.744);
+    padding: 8% 6%;
+    position: relative;
+    animation: opac 1s ease;
+}
+#descriptionwall>div:hover{
+    border: 1px solid rgba(128, 128, 128, 0.744);
+}
+#descriptionwall>div>img{
+    width: 100%;
+    cursor: pointer;
+}
+#descriptionwall>div>h1{
+    margin-top: 2%;
+}
+#descriptionwall>div>p{
+    margin-top: 3%;
+    font-size: 17px;
+}
+#descriptionwall>div>#price2{
+    margin-top: 10%;
+    font-weight: bold;
+}
+#descriptionwall>div>button{
+    margin-top: 6%;
+    padding: 5%;
+    font-size: medium;
+    cursor: pointer;
+    background-color: rgb(239, 239, 239);
+    border-radius: 6px;
+    border: none;
+}
+#descriptionwall>div>#heart2{
+    background: transparent;
+    font-size: 18px;
+    border: none;
+    position: absolute;
+    top: -1.5%;
+    left: 80%;
+}
+#text2{
+    position: absolute;
+    left: 76%;
+    top: 1%;
+    color: red;
+    font-weight: bold;
+    animation: opac 1s ease;
+}
+
+@media all and (max-width: 600px){
+    #descriptionwall{
+        display: grid;
+        grid-template-columns: 1fr;
+        margin-top: 10%;
+    }
+}
+@media all and (min-width: 601px) and (max-width: 949px){
+    #descriptionwall{
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+        margin-top: 10%;
+    }
+}
+@media all and (min-width: 950px) and (max-width: 1400px){
+    #descriptionwall{
+        display: grid;
+        grid-template-columns: repeat(3,1fr);
+        margin-top: 10%;
+    }
+}

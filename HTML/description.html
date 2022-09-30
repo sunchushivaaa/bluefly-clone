@@ -4,9 +4,9 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bluefly | Main</title>
+    <title>Bluefly | Product Details</title>
 </head>
-<link rel="stylesheet" href="/Styles/index.css">
+<link rel="stylesheet" href="/Styles/description.css">
 <link rel="stylesheet" href="/Styles/header.css">
 <link rel="stylesheet" href="/Styles/common.css">
 <header>
@@ -56,7 +56,7 @@
                 <option value="">DESIGNERS</option>
                 <option value="feature">Featured Designers</option>
             </select>
-            <select>
+            <select id="sunglasses">
                 <option value="">SUNGLASSES</option>
                 <option value="Women">Women's Sunglasses</option>
                 <option value="Men">Men's Sunglasses</option>
@@ -85,105 +85,8 @@
             <a href="/HTML/account.html">Login</a>
         </div>
     </div>
-    <div id="library">
-        <div class = "items visible">
-            <div>
-                <img src="/Images/gucci.jpg" alt="Gucci">
-                <div>
-                    <h1>GUCCI</h1>
-                    <p>THIS ICONIC BRAND IS REPRESENTED WITH GREAT DESIGN & LIFESTYLE</p>
-                    <button id = "gucci-btn">SHOP NOW</button>
-                </div>
-            </div>
-        </div>
-        <div>
-            <div class = "items">
-                <img src="/Images/prada.jpg" alt="Prada">
-                <div>
-                    <h1>PRADA</h1>
-                    <p>AN ITALIAN FAHSION HOUSE MADE WITH CLASSIC & ECCENTRIC STYLE</p>
-                    <button id = "prada-btn">SHOP NOW</button>
-                </div>
-            </div>
-        </div>
-        <div>
-            <div class = "items">
-                <img src="/Images/fendi.jpg" alt="Fendi">
-                <div>
-                    <h1>FENDI</h1>
-                    <p>A TOP FASHION BRAND THAT CULTIVATES THE DESIGN OF STYLES</p>
-                    <button id = "fendi-btn">SHOP NOW</button>
-                </div>
-            </div>
-        </div>
-        <div>
-            <div class = "items">
-                <img src="/Images/sunglasses.jpg" alt="Sunglasses">
-                <div id = "sun">
-                    <h1>ICONIC SUNGLASSES</h1>
-                    <p>Featuring Dior, Balmain, Givenchy, & More</p>
-                    <p>For Men and Women</p> 
-                    <button id = "sunglasses-btn">SHOP NOW</button>
-                </div>
-            </div>
-        </div>
-        <div class ="actions">
-            <button id = "prev">&#10094</button>
-            <button id = "next">&#10095</button>
-        </div>
-    </div>
-    <div id="shopcategory">
-        <h1>SHOP BY CATEGORY</h1>
-        <div id="categories">
-            <div id="clothes">
-                <img src="https://cdn-images.farfetch-contents.com/18/53/61/96/18536196_41154462_480.jpg" alt="clothes">
-                <p>CLOTHES</p>
-            </div>
-            <div id="sneakers">
-                <img src="https://cdn-images.farfetch-contents.com/18/72/86/72/18728672_41723041_600.jpg" alt="sneakers">
-                <p>SNEAKERS</p>
-            </div>
-            <div id="denim">
-                <img src="https://cdn-images.farfetch-contents.com/16/83/35/59/16833559_34588609_480.jpg" alt="denim">
-                <p>DENIM</p>
-            </div>
-            <div id="handbag">
-                <img src="https://cdn-images.farfetch-contents.com/18/04/80/84/18048084_39646133_480.jpg" alt="handbags">
-                <p>HAND BAGS</p>
-            </div>
-            <div id="jewel">
-                <img src="https://cdn-images.farfetch-contents.com/18/58/36/11/18583611_40100862_480.jpg" alt="jewelry">
-                <p>JEWELRY</p>
-            </div>
-            <div id="sunglass">
-                <img src="https://cdn-images.farfetch-contents.com/17/90/25/85/17902585_40161101_480.jpg" alt="sunglasses">
-                <p>SUNGLASSES</p>
-            </div>
-        </div>
-    </div>
-    <div id = "dis">
-        <h1>DISCOUNT SECTION</h1>
-        <div id="discount">
-            <div>
-                <img src="https://cdn-images.farfetch-contents.com/16/04/83/55/16048355_30151541_1000.jpg" alt="denim">
-                <h2>UP TO 85% OFF THE DENIM SHOP FOR HER</h2>
-                <p>From Hudson Jeans, Joe's Jeans, J Brand & More</p>
-                <button id = "jeans">SHOP DENIM</button>
-            </div>
-            <div>
-                <img src="https://cdn-images.farfetch-contents.com/17/16/00/99/17160099_37842579_1000.jpg" alt="jumpsuit">
-                <h2>UP TO 90% OFF TRENDING JUMPSUITS</h2>
-                <p>Must-Haves From Halston, BCBGMAXAZRIA, Iro & More</p>
-                <button id = "jumpsuit">SHOP JUMPSUITS</button>
-            </div>
-            <div>
-                <img src="https://cdn-images.farfetch-contents.com/15/98/48/42/15984842_30037356_1000.jpg" alt="accessories">
-                <h2>UP TO 90% OFF WOMEN'S MUST-HAVE ACCESSORIES</h2>
-                <p>Shop Wallets, Belts, Hats, Sunglasses & More</p>
-                <button id = "accessories">SHOP WOMEN'S ACCESSORIES</button>
-            </div>
-        </div>
-    </div>
+    <div id="prodwall"></div>
+    <div id = "descriptionwall"></div>
 </body>
 <footer>
     <div id="upp">
@@ -251,6 +154,6 @@
         <p>© 2022 Bluefly 1998-2020 BLUEFLY.COM OR ITS AFFILIATES ALL RIGHTS RESERVED.</p>
     </div>
 </footer>
-<script src="/JavaScript/index.js"></script>
+<script src="/JavaScript/description.js"></script>
 <script src="/JavaScript/header.js"></script>
 </html>

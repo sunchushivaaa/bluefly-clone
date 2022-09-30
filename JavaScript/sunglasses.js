@@ -354,17 +354,6 @@ let sunglassesData = [
     },
     {
       image_url:
-        "https://cdn-images.farfetch-contents.com/16/00/90/70/16009070_29818267_480.jpg",
-      brand: "Givenchy Eyewear",
-      category: "Women",
-      desc: "GV pierced sunglasses",
-      details: `Trying to hide yesterday's late night at work? Go ahead and cover up your eyes with these GV-pierced sunglasses from Givenchy Eyewear that are bold enough to make your boss simply think you're pulling off a glamorous look. It'll be our stylish little secret.
-  
-  Made in Italy`,
-      price: "528",
-    },
-    {
-      image_url:
         "https://cdn-images.farfetch-contents.com/16/79/08/65/16790865_33513071_480.jpg",
       brand: "Givenchy Eyewear",
       category: "Women",
@@ -812,11 +801,7 @@ let sunglassesData = [
   Made in Italy`,
       price: "528",
     },
-  ];
-  
-  
-  
-  
+  ]; 
   
 let likeData = JSON.parse(localStorage.getItem("like-items")) || [];
 let cartData = JSON.parse(localStorage.getItem("cart-items")) || [];
@@ -869,6 +854,19 @@ function displayFun(read){
         cartData.push(elem);
         localStorage.setItem("cart-items", JSON.stringify(cartData));
         })
+
+        image.addEventListener("click", function(){
+
+          let prod = [elem];
+          let descrpt = read.filter(function(el){
+            return elem.brand == el.brand && elem!=el && elem.category == el.category;
+          });
+
+          localStorage.setItem("descrpt" , JSON.stringify(descrpt));
+          localStorage.setItem("prod", JSON.stringify(prod));
+          localStorage.setItem("dataArr", JSON.stringify(sunglassesData));
+          window.location.href = "/HTML/description.html";
+        });
         
         div.append(text,image,brand,desc,price, likebtn, cartbtn);
         wall.append(div);
