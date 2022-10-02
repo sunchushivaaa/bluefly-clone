@@ -7,54 +7,24 @@
     <title>Bluefly | Payment</title>
 </head>
 <link rel="stylesheet" href="/Styles/payment.css">
+<link rel="stylesheet" href="/Styles/common.css">
+<link rel="stylesheet" href="/Styles/header.css">
 <body>
-    <div id="library">
-        <div class = "items visible">
-            <div>
-                <img src="/Images/gucci.jpg" alt="Gucci">
-                <div>
-                    <h1>GUCCI</h1>
-                    <p>THIS ICONIC BRAND IS REPRESENTED WITH GREAT DESIGN & LIFESTYLE</p>
-                    <button id = "gucci-btn">SHOP NOW</button>
-                </div>
-            </div>
-        </div>
-        <div>
-            <div class = "items">
-                <img src="/Images/prada.jpg" alt="Prada">
-                <div>
-                    <h1>PRADA</h1>
-                    <p>AN ITALIAN FAHSION HOUSE MADE WITH CLASSIC & ECCENTRIC STYLE</p>
-                    <button id = "prada-btn">SHOP NOW</button>
-                </div>
-            </div>
-        </div>
-        <div>
-            <div class = "items">
-                <img src="/Images/fendi.jpg" alt="Fendi">
-                <div>
-                    <h1>FENDI</h1>
-                    <p>A TOP FASHION BRAND THAT CULTIVATES THE DESIGN OF STYLES</p>
-                    <button id = "fendi-btn">SHOP NOW</button>
-                </div>
-            </div>
-        </div>
-        <div>
-            <div class = "items">
-                <img src="/Images/sunglasses.jpg" alt="Sunglasses">
-                <div>
-                    <h1>ICONIC SUNGLASSES</h1>
-                    <p>Featuring Dior, Balmain, Givenchy, & More</p>
-                    <p>For Men and Women</p> 
-                    <button id = "sunglasses-btn">SHOP NOW</button>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class ="actions">
-        <button id = "prev">&#10094</button>
-        <button id = "next">&#10095</button>
+    <button>Back</button>
+    <div id="gateway">
+        <h1>Payment gateway</h1>
+        <form id = "form" action="">
+            <input id = "name" type="text" placeholder="Enter name">
+            <input id = "email" type="email" placeholder="Email address">
+            <input id = "phone" type="number" placeholder="Phone number">
+            <input id = "amount" type="text" placeholder="Total amount">
+            <input id = "card" type="number" placeholder="Card number">
+            <input id = "date" type="month">
+            <input id = "cvv" type="password" placeholder="CVV">
+            <input id = "submit" type="submit">
+        </form>
     </div>
 </body>
 <script src="/JavaScript/payment.js"></script>
+<script src="/JavaScript/header.js"></script>
 </html>

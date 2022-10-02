@@ -1,7 +1,108 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Quicksand&display=swap');
 *{
     padding: 0;
     margin: 0;
     box-sizing: border-box;
     letter-spacing: 2px;
+}
+body{
+    background-color: white;
+}
+#content{
+    width: 80%;
+    margin: auto;
+    margin-top: 5%;
+    margin-bottom: 5%;
+}
+#content>div>img{
+    width: 100%;
+}
+#likewall{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 20px 15px;
+}
+#likewall>div{
+    border: 1px solid rgba(207, 207, 207, 0.744);
+    padding: 6%;
+    position: relative;
+    animation: opac 1s ease;
+}
+#likewall>div:hover{
+    border: 1px solid rgba(128, 128, 128, 0.744);
+}
+#likewall>div>img{
+    width: 100%;
+    cursor: pointer;
+}
+#likewall>div>h1{
+    margin-top: 4%;
+    font-size: 25px;
+}
+#likewall>div>p{
+    margin-top: 3%;
+    font-size: 16px;
+}
+#likewall>div>#price{
+    margin-top: 10%;
+    font-weight: bold;
+}
+#likewall>div>#price:hover{
+    color: rgb(96, 96, 96);
+    cursor: pointer;
+}
+#likewall>div>button{
+    margin-top: 6%;
+    padding: 5%;
+    margin-right: 5%;
+    font-size: medium;
+    cursor: pointer;
+    background-color: rgb(239, 239, 239);
+    border-radius: 6px;
+    border: none;
+}
+@keyframes opac{
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+}
+@media all and (max-width: 600px){
+    #content{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+    #likewall{
+        display: grid;
+        grid-template-columns: 1fr;
+        margin-top: 10%;
+    }
+}
+@media all and (min-width: 601px) and (max-width: 949px){
+    #content{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+    #likewall{
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+        margin-top: 10%;
+    }
+}
+@media all and (min-width: 950px) and (max-width: 1400px){
+    #content{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+    #likewall{
+        display: grid;
+        grid-template-columns: repeat(3,1fr);
+        margin-top: 10%;
+    }
 }

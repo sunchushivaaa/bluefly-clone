@@ -88,6 +88,9 @@ for(let a=0; a<emailbtn.length; a++){
 }
 
 let itemsData = JSON.parse(localStorage.getItem("discount-items"));
+let likeData = JSON.parse(localStorage.getItem("like-items"));
+let cartData = JSON.parse(localStorage.getItem("cart-items"));
+
 
 function displayFun(read){
 
@@ -113,17 +116,37 @@ function displayFun(read){
 
         let price = document.createElement("p");
         price.innerText = `$${elem.price}`;
-        price.setAttribute("id", "price")
+        price.setAttribute("id", "price");
+        let count = 0;
+        price.addEventListener("click", function () {
+          if (count % 2 == 0) {
+            let res = elem.price * 80;
+            price.innerText = "";
+            price.innerText = `₹${res}`;
+            count++;
+          } else {
+            price.innerText = `$${elem.price}`;
+            count++;
+          }
+        });
 
         let likebtn = document.createElement("button");
         likebtn.innerText = "❤️";
         likebtn.style.cursor = "pointer";
         likebtn.setAttribute("id" , "heart")
         likebtn.addEventListener("click", function(){
-            likebtn.innerText = "";
-            text.style.display = "block";
-            likeData.push(elem);
-            localStorage.setItem("like-items", JSON.stringify(likeData));
+            let res = likeData.filter(function(el){
+                return elem.image_url == el.image_url;
+              });
+              if(res.length>0){
+                alert("You are adding it again!");
+                window.location.href = "/HTML/like.html";
+              } else{
+                likebtn.innerText = "";
+                text.style.display = "block";
+                likeData.push(elem);
+                localStorage.setItem("like-items", JSON.stringify(likeData));
+              }
         })
 
         let cartbtn = document.createElement("button");
@@ -134,8 +157,20 @@ function displayFun(read){
         cartbtn.style.color = "green";
         cartbtn.style.fontWeight = "bold";
         cartbtn.style.animation= "opac 1s ease";
-        cartData.push(elem);
-        localStorage.setItem("cart-items", JSON.stringify(cartData));
+        let res = cartData.filter(function(el){
+            return elem.image_url == el.image_url;
+          });
+          if(res.length>0){
+            res[0]["quantity"]+=1;
+            cartData.push(res);
+            cartData.pop(res);
+            localStorage.setItem("cart-items", JSON.stringify(cartData));
+      
+          } else{
+            elem["quantity"] = 1;
+            cartData.push(elem);
+            localStorage.setItem("cart-items", JSON.stringify(cartData));
+          }
         });
 
         image.addEventListener("click", function(){
