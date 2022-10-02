@@ -112,16 +112,36 @@ prod.forEach(function (elem) {
   let price = document.createElement("p");
   price.innerText = `$${elem.price}`;
   price.setAttribute("id", "price1");
+  let count = 0;
+  price.addEventListener("click", function () {
+    if (count % 2 == 0) {
+      let res = elem.price * 80;
+      price.innerText = "";
+      price.innerText = `₹${res}`;
+      count++;
+    } else {
+      price.innerText = `$${elem.price}`;
+      count++;
+    }
+  });
 
   let likebtn = document.createElement("button");
   likebtn.innerText = "❤️";
   likebtn.style.cursor = "pointer";
   likebtn.setAttribute("id", "heart1");
   likebtn.addEventListener("click", function () {
-    likebtn.innerText = "";
-    text.style.display = "block";
-    likeData.push(elem);
-    localStorage.setItem("like-items", JSON.stringify(likeData));
+    let res = likeData.filter(function(el){
+      return elem.image_url == el.image_url;
+    });
+    if(res.length>0){
+      alert("You are adding it again!");
+      window.location.href = "/HTML/like.html";
+    } else{
+      likebtn.innerText = "";
+      text.style.display = "block";
+      likeData.push(elem);
+      localStorage.setItem("like-items", JSON.stringify(likeData));
+    }
   });
 
   let cartbtn = document.createElement("button");
@@ -132,8 +152,20 @@ prod.forEach(function (elem) {
     cartbtn.style.color = "green";
     cartbtn.style.fontWeight = "bold";
     cartbtn.style.animation = "opac 1s ease";
-    cartData.push(elem);
-    localStorage.setItem("cart-items", JSON.stringify(cartData));
+    let res = cartData.filter(function(el){
+      return elem.image_url == el.image_url;
+    });
+    if(res.length>0){
+      res[0]["quantity"]+=1;
+      cartData.push(res);
+      cartData.pop(res);
+      localStorage.setItem("cart-items", JSON.stringify(cartData));
+
+    } else{
+      elem["quantity"] = 1;
+      cartData.push(elem);
+      localStorage.setItem("cart-items", JSON.stringify(cartData));
+    }
   });
 
   let detail = document.createElement("p");
@@ -164,17 +196,37 @@ dataArr.forEach(function(elem){
 
   let price = document.createElement("p");
   price.innerText = `$${elem.price}`;
-  price.setAttribute("id", "price2")
+  price.setAttribute("id", "price2");
+  let count = 0;
+  price.addEventListener("click", function () {
+    if (count % 2 == 0) {
+      let res = elem.price * 80;
+      price.innerText = "";
+      price.innerText = `₹${res}`;
+      count++;
+    } else {
+      price.innerText = `$${elem.price}`;
+      count++;
+    }
+  });
 
   let likebtn = document.createElement("button");
   likebtn.innerText = "❤️";
   likebtn.style.cursor = "pointer";
   likebtn.setAttribute("id" , "heart2")
   likebtn.addEventListener("click", function(){
+    let res = likeData.filter(function(el){
+      return elem.image_url == el.image_url;
+    });
+    if(res.length>0){
+      alert("You are adding it again!");
+      window.location.href = "/HTML/like.html";
+    } else{
       likebtn.innerText = "";
       text.style.display = "block";
       likeData.push(elem);
       localStorage.setItem("like-items", JSON.stringify(likeData));
+    }
   })
 
   let cartbtn = document.createElement("button");
@@ -185,8 +237,20 @@ dataArr.forEach(function(elem){
   cartbtn.style.color = "green";
   cartbtn.style.fontWeight = "bold";
   cartbtn.style.animation= "opac 1s ease";
-  cartData.push(elem);
-  localStorage.setItem("cart-items", JSON.stringify(cartData));
+  let res = cartData.filter(function(el){
+    return elem.image_url == el.image_url;
+  });
+  if(res.length>0){
+    res[0]["quantity"]+=1;
+    cartData.push(res);
+    cartData.pop(res);
+    localStorage.setItem("cart-items", JSON.stringify(cartData));
+
+  } else{
+    elem["quantity"] = 1;
+    cartData.push(elem);
+    localStorage.setItem("cart-items", JSON.stringify(cartData));
+  }
   })
 
   image.addEventListener("click", function(){

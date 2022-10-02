@@ -60,6 +60,10 @@ body{
     margin-top: 10%;
     font-weight: bold;
 }
+#gucciwall>div>#price:hover{
+    color: rgb(96, 96, 96);
+    cursor: pointer;
+}
 #gucciwall>div>button{
     margin-top: 6%;
     padding: 5%;
