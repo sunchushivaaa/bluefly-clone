@@ -5,10 +5,12 @@
     box-sizing: border-box;
     letter-spacing: 2px;
 }
+nav{
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px -1px, rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
+}
 #navbar{
     padding: 3% 4% 1.5% 2%;
     background-color: white;
-    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px -1px, rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
 }
 #menu-btn{
     display: none;

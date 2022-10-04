@@ -1,4 +1,4 @@
-let menuBtn = document.getElementById("menu-btn");
+// let menuBtn = document.getElementById("menu-btn");
 let menu = document.getElementById("menu");
 let cancel = document.getElementById("cancel");
 let body = document.querySelector("body");
