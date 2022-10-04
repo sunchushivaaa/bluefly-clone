@@ -14,6 +14,7 @@
 #gateway>h1{
     text-align: center;
     padding: 8% 0 1% 0;
+    margin-bottom: 5%;
 }
 #gateway>#form{
     display: grid;

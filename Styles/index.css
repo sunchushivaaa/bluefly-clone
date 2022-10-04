@@ -153,6 +153,70 @@
 #discount>div>button:hover{
     background-color: rgb(231, 231, 231);
 }
+#one1 , #two2, #three3, #five5, #six6, #eight8, #nine9{
+    display: none;
+    width: 80%;
+    margin: auto;
+    margin-top: 2%;
+    animation: opac 1s ease;
+    grid-template-columns: repeat(5,1fr);
+    font-family: 'Quicksand', sans-serif;
+
+}
+#one1>div>h3, #two2>div>h3, #three3>div>h3, #five5>div>h3, #six6>div>h3, #eight8>div>h3, #nine9>div>h3{
+    margin-bottom: 5%;
+}
+#one1>div>div, #two2>div>div, #three3>div>div, #five5>div>div, #six6>div>div, #eight8>div>div, #nine9>div>div{
+    margin-top: 3%;
+}
+#one1>div:nth-child(1), #two2>div:nth-child(1), #three3>div:nth-child(1), #five5>div:nth-child(1), #six6>div:nth-child(1), #nine9>div:nth-child(1), #eight8>div:nth-child(1){
+    grid-area: 1/5/1/6;
+    animation: opac 1s ease;
+
+}
+#one1>div:nth-child(2), #two2>div:nth-child(2), #three3>div:nth-child(2), #five5>div:nth-child(2), #six6>div:nth-child(2), #nine9>div:nth-child(2), #eight8>div:nth-child(2){
+    grid-area: 1/1/1/2;
+    padding-top: 3%;
+    animation: div1 1.2s ease;
+}
+#one1>div:nth-child(3), #two2>div:nth-child(3), #three3>div:nth-child(3), #five5>div:nth-child(3), #six6>div:nth-child(3), #eight8>div:nth-child(3){
+    grid-area: 1/2/1/3;
+    padding-top: 3%;
+    animation: div2 1s ease;
+}
+#one1>div:nth-child(4), #three3>div:nth-child(4), #six6>div:nth-child(4), #eight8>div:nth-child(4){
+    grid-area: 1/3/1/4;
+    padding-top: 3%;
+    animation: div1 1s ease;
+}
+#one1>div>img, #two2>div>img, #three3>div>img, #five5>div>img, #six6>div>img, #eight8>div>img, #nine9>div>img{
+    width: 100%;
+    padding: 8%;
+}
+@keyframes div1 {
+    0%{
+        position: relative;
+        top: 15%;
+        opacity: 0;
+    }
+    100%{
+        position: relative;
+        top: 0;
+        opacity: 1;
+    }
+}
+@keyframes div2 {
+    0%{
+        position: relative;
+        top: 23%;
+        opacity: 0;
+    }
+    100%{
+        position: relative;
+        top: 0;
+        opacity: 1;
+    }
+}
 @keyframes opac{
 
     0%{
@@ -294,6 +358,10 @@
     #discount{
         grid-template-columns: 1fr;
     }
+    #one1 , #two2, #three3, #five5, #six6, #eight8, #nine9{
+        display: none;
+    
+    }
 }
 @media all and (min-width: 721px) and (max-width: 1440px){
     #shopcategory{
@@ -315,5 +383,8 @@
     }
     #discount{
         grid-template-columns: repeat(2,1fr);
+    }
+    #one1 , #two2, #three3, #five5, #six6, #eight8, #nine9{
+        width: 90%;
     }
 }

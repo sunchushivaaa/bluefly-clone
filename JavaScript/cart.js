@@ -75,7 +75,7 @@ cart.addEventListener("click", function () {
 });
 
 logo.addEventListener("click", function () {
-  window.location.href = "/HTML/index.html";
+  window.location.href = "../index.html";
 });
 
 account.addEventListener("click", function () {
@@ -87,6 +87,11 @@ like.addEventListener("click", function () {
 });
 
 let cartData = JSON.parse(localStorage.getItem("cart-items")) || [];
+let loginArr = JSON.parse(localStorage.getItem("login-details")) || [];
+
+if(loginArr.length!=0){
+    account.setAttribute("src" , "/Images/icons8-user-50.png");
+}
 
 let cost = 0;
 function displayFun(read) {
@@ -106,7 +111,7 @@ function displayFun(read) {
     let price = document.createElement("p");
     price.innerText = `$${elem.price}`;
     price.setAttribute("id", "price");
-    cost += Number(elem.price);
+    cost += (Number(elem.price) * Number(elem.quantity));
     let count = 0;
     price.addEventListener("click", function () {
       if (count % 2 == 0) {
@@ -119,6 +124,48 @@ function displayFun(read) {
         count++;
       }
     });
+
+    let quantity = document.createElement("div");
+    quantity.setAttribute("id", "count");
+    let minus = document.createElement("div");;
+    minus.innerText = "-";
+    minus.setAttribute("id", "minus");
+
+    minus.addEventListener("click", function(){
+      if(elem.quantity!=1){
+        elem.quantity--;
+        localStorage.setItem("cart-items" , JSON.stringify(read));
+        window.location.reload();
+      } else{
+        read = read.filter(function (el) {
+          return elem != el;
+        });
+        cost -= Number(elem.price);
+        localStorage.setItem("cart-items", JSON.stringify(read));
+        window.location.reload();
+      }
+    });
+
+    let display = document.createElement("div");;
+    display.innerText = elem.quantity;
+    display.setAttribute("id" ,"display");
+
+    let plus = document.createElement("div");
+    plus.innerText = "+";
+    plus.setAttribute("id", "plus");
+
+    plus.addEventListener("click", function(){
+        if(elem.quantity<10){
+          elem.quantity++;
+          localStorage.setItem("cart-items" , JSON.stringify(read));
+          window.location.reload();
+        } else{
+          alert("Limit exceeded")
+        }
+    })
+
+    quantity.append(minus,display,plus);
+
 
     let likebtn = document.createElement("button");
     likebtn.innerText = "remove";
@@ -147,7 +194,7 @@ function displayFun(read) {
       window.location.href = "/HTML/description.html";
     });
 
-    div.append(image, brand, desc, price, likebtn);
+    div.append(image, brand, desc, price, quantity, likebtn);
     wall.append(div);
   });
   total.append(cost);
@@ -197,3 +244,87 @@ checkout.addEventListener("click", function(){
     localStorage.setItem("amount" , cost)
 })
 
+let one1 = document.getElementById("one1");
+let one = document.getElementById("one");
+let nav = document.querySelector("nav");
+
+one.addEventListener("mouseover", function(){
+    one1.style.display = "grid";
+    nav.style.paddingBottom = "3%";
+})
+one.addEventListener("mouseout", function(){
+  one1.style.display = "none";
+  nav.style.paddingBottom = "0%";
+})
+
+let two2 = document.getElementById("two2");
+let two = document.getElementById("two");
+
+two.addEventListener("mouseover", function(){
+  two2.style.display = "grid";
+  nav.style.paddingBottom = "3%";
+})
+two.addEventListener("mouseout", function(){
+two2.style.display = "none";
+nav.style.paddingBottom = "0%";
+})
+
+let three3 = document.getElementById("three3");
+let three = document.getElementById("three");
+
+three.addEventListener("mouseover", function(){
+  three3.style.display = "grid";
+  nav.style.paddingBottom = "3%";
+})
+three.addEventListener("mouseout", function(){
+three3.style.display = "none";
+nav.style.paddingBottom = "0%";
+})
+
+let five5 = document.getElementById("five5");
+let five = document.getElementById("five");
+
+five.addEventListener("mouseover", function(){
+  five5.style.display = "grid";
+  nav.style.paddingBottom = "3%";
+})
+five.addEventListener("mouseout", function(){
+five5.style.display = "none";
+nav.style.paddingBottom = "0%";
+})
+
+let six6 = document.getElementById("six6");
+let six = document.getElementById("six");
+
+six.addEventListener("mouseover", function(){
+  six6.style.display = "grid";
+  nav.style.paddingBottom = "3%";
+})
+six.addEventListener("mouseout", function(){
+six6.style.display = "none";
+nav.style.paddingBottom = "0%";
+})
+
+let eight8 = document.getElementById("eight8");
+let eight = document.getElementById("eight");
+
+eight.addEventListener("mouseover", function(){
+  eight8.style.display = "grid";
+  nav.style.paddingBottom = "3%";
+})
+eight.addEventListener("mouseout", function(){
+eight8.style.display = "none";
+nav.style.paddingBottom = "0%";
+})
+
+let nine9 = document.getElementById("nine9");
+let nine = document.getElementById("nine");
+
+nine.addEventListener("mouseover", function(){
+  nine9.style.display = "grid";
+  nav.style.paddingBottom = "3%";
+})
+nine.addEventListener("mouseout", function(){
+nine9.style.display = "none";
+nav.style.paddingBottom = "0%";
+})

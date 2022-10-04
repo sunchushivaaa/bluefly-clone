@@ -8,7 +8,7 @@ cart.addEventListener("click", function () {
 });
 
 logo.addEventListener("click", function () {
-  window.location.href = "/HTML/index.html";
+  window.location.href = "../index.html";
 });
 
 account.addEventListener("click", function () {
@@ -90,6 +90,11 @@ let descriptionwall = document.getElementById("descriptionwall");
 
 let likeData = JSON.parse(localStorage.getItem("like-items")) || [];
 let cartData = JSON.parse(localStorage.getItem("cart-items")) || [];
+let loginArr = JSON.parse(localStorage.getItem("login-details")) || [];
+
+if(loginArr.length!=0){
+    account.setAttribute("src" , "/Images/icons8-user-50.png");
+}
 
 prod.forEach(function (elem) {
   let div1 = document.createElement("div");
@@ -269,3 +274,87 @@ dataArr.forEach(function(elem){
   descriptionwall.append(div);
 });
 
+let one1 = document.getElementById("one1");
+let one = document.getElementById("one");
+let nav = document.querySelector("nav");
+
+one.addEventListener("mouseover", function(){
+    one1.style.display = "grid";
+    nav.style.paddingBottom = "3%";
+})
+one.addEventListener("mouseout", function(){
+  one1.style.display = "none";
+  nav.style.paddingBottom = "0%";
+})
+
+let two2 = document.getElementById("two2");
+let two = document.getElementById("two");
+
+two.addEventListener("mouseover", function(){
+  two2.style.display = "grid";
+  nav.style.paddingBottom = "3%";
+})
+two.addEventListener("mouseout", function(){
+two2.style.display = "none";
+nav.style.paddingBottom = "0%";
+})
+
+let three3 = document.getElementById("three3");
+let three = document.getElementById("three");
+
+three.addEventListener("mouseover", function(){
+  three3.style.display = "grid";
+  nav.style.paddingBottom = "3%";
+})
+three.addEventListener("mouseout", function(){
+three3.style.display = "none";
+nav.style.paddingBottom = "0%";
+})
+
+let five5 = document.getElementById("five5");
+let five = document.getElementById("five");
+
+five.addEventListener("mouseover", function(){
+  five5.style.display = "grid";
+  nav.style.paddingBottom = "3%";
+})
+five.addEventListener("mouseout", function(){
+five5.style.display = "none";
+nav.style.paddingBottom = "0%";
+})
+
+let six6 = document.getElementById("six6");
+let six = document.getElementById("six");
+
+six.addEventListener("mouseover", function(){
+  six6.style.display = "grid";
+  nav.style.paddingBottom = "3%";
+})
+six.addEventListener("mouseout", function(){
+six6.style.display = "none";
+nav.style.paddingBottom = "0%";
+})
+
+let eight8 = document.getElementById("eight8");
+let eight = document.getElementById("eight");
+
+eight.addEventListener("mouseover", function(){
+  eight8.style.display = "grid";
+  nav.style.paddingBottom = "3%";
+})
+eight.addEventListener("mouseout", function(){
+eight8.style.display = "none";
+nav.style.paddingBottom = "0%";
+})
+
+let nine9 = document.getElementById("nine9");
+let nine = document.getElementById("nine");
+
+nine.addEventListener("mouseover", function(){
+  nine9.style.display = "grid";
+  nav.style.paddingBottom = "3%";
+})
+nine.addEventListener("mouseout", function(){
+nine9.style.display = "none";
+nav.style.paddingBottom = "0%";
+})
