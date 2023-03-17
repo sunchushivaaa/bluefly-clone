@@ -27,15 +27,15 @@
  <ul>
  <li>
  <h3>Home Page</h3>
-![Bluefly](https://user-images.githubusercontent.com/110079977/225231459-356cd540-fe3f-42b6-9c00-49acb0366aaf.png)
+ <img src = "https://user-images.githubusercontent.com/110079977/225231459-356cd540-fe3f-42b6-9c00-49acb0366aaf.png" alt = "Bluefly"/>
  </li>
  <li>
  <h3>Category Page</h3>
- ![Bluefly-Category](https://user-images.githubusercontent.com/110079977/225233109-061206e1-a7ad-45fe-ae00-287fcd194f25.png)
+ <img src = "https://user-images.githubusercontent.com/110079977/225233109-061206e1-a7ad-45fe-ae00-287fcd194f25.png" alt = "Bluefly-Category"/>
  </li>
  <li>
  <h3>Cart Page</h3>
- ![Bluefly-Cart](https://user-images.githubusercontent.com/110079977/225233530-2feeed74-f488-476f-893d-c0e5e18de460.png)
+ <img src = "https://user-images.githubusercontent.com/110079977/225233530-2feeed74-f488-476f-893d-c0e5e18de460.png" alt = "Bluefly-Cart"/>
  </li>
  </ul>
  
